@@ -1,4 +1,4 @@
-# Close Saved Files
+# Close Others Not Saved
 
 Simple VS Code extension to close saved (non-dirty) editors.
 
