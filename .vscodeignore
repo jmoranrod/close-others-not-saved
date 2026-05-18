@@ -7,3 +7,9 @@ src/**
 vsc-extension-quickstart.md
 **/*.map
 **/*.ts
+docs/**
+scripts/**
+resources/**
+node_modules/**
+*.code-workspace
+tests/**
