@@ -9,7 +9,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     tabGroups.forEach(group => {
       group.tabs.forEach(tab => {
-        if (tab.isDirty) return;
+        if (tab.isDirty || tab.isPinned) return;
         tabsToClose.push(tab);
       });
     });
@@ -73,7 +73,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
     for (const tab of group.tabs) {
-      if (tab !== targetTab && !tab.isDirty) {
+      if (tab !== targetTab && !tab.isDirty && !tab.isPinned) {
         tabsToClose.push(tab);
       }
     }
